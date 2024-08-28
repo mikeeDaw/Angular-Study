@@ -16,8 +16,56 @@
 
 ## Commands
 
-- Start App in Development Mode -> `ng serve`
+- Start App in Development Mode -> `ng serve`.
+- Create a component -> `ng generate component [directory/path (relative from 'src/app' directory)]`.
+- Create a service -> `ng generate service [directory/path]`
+
+## Some Concepts
+
+#### Services
+
+- Functionality that can be accessed by many components. Put in a separate controller (a separate collection of methods).
+- App-wide Scope.
+- Tasks like fetching data from server, validating user input, or logging directly to the console.
+
+#### Observables
+
+- Similar to a Promise. Handles asyncronous operations.
+- Are a stream of events or data.
+- Observables vs Promises:
+  - Observable is 0 to Many Results; Promises is 0 to 1 Result.
+  - Observables can stream data over a period of time, than sending data all at once;
+    Promises sends all data once it is completed.
+
+**Subscribing to Observables**
+
+- Without subscribing, the stream (observable) wont start to emit values.
+- Has 3 Methods:
+  1. To Process EACH TIME an item (can be data or an event) is emitted from observable
+  2. Process any error that occurs
+  3. Clean up everything once the observer completes. (Seldom Used)
+
+## Notes ko
+
+#### Component Stucture
+
+- `.component.html`, `.component.scss`, `.component.spec.ts`, and `.component.ts` comprises 1 component.
+- Normally, any component will be in a dedicated directory.
+- The main file of the component is the `.component.ts` file.
+- `.spec.ts` file is only for testing. Can ignore (for now). Its not connected with the component in `.component.ts` file.
+
+#### Extensions Installed
+
+- Angular Language Service
+- Auto Rename Tag
 
 ---
 
 ## Topics
+
+- Components - `home/home.component.ts`
+- Observables - `services/products.services.ts`
+- Routing - `app.routes.ts`
+- Server (Another project but not explained since focus is in angular)
+- Services - `services/api.service.ts`
+- Dependency Injection - `services/api.service.ts` and `services/products.service.ts`
