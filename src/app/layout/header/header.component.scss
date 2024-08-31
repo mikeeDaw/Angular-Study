@@ -1,0 +1,14 @@
+@use "../../styles/resource.scss" as v;
+
+.wrapper {
+  height: 80px;
+  width: 100%;
+  padding: 20px 10px;
+  border-bottom: 1px solid v.$borderCol;
+  @include v.flex-flow(center, center);
+}
+
+.logo {
+  height: 100%;
+  object-fit: contain;
+}

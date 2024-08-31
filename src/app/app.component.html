@@ -1,4 +1,13 @@
-<!-- Router Outlet is a way to display a component based on the visited Route -->
-<router-outlet />
+<!-- Header Component-->
+<!-- To use the components, import it first on the `.component.ts` file. -->
+<app-header></app-header>
 
+<!-- Wrapper -->
+<div class="wrapper">
+  <!-- Router Outlet is a way to display a component based on the visited Route -->
+  <!-- All components loaded based on the `app.routes.ts` is placed on the position of the outlet. -->
+  <router-outlet />
+</div>
 
+<!-- Footer Component -->
+<app-footer></app-footer>

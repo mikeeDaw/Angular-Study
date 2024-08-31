@@ -1,0 +1,14 @@
+$headerCol: white;
+$borderCol: rgb(230, 230, 230);
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-flow($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

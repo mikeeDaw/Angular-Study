@@ -47,6 +47,8 @@
 
 ## Notes ko
 
+- Component Library: [PrimeNG](https://primeng.org/installation) \(Seems Good!\)
+
 #### Component Stucture
 
 - `.component.html`, `.component.scss`, `.component.spec.ts`, and `.component.ts` comprises 1 component.
@@ -69,3 +71,10 @@
 - Server (Another project but not explained since focus is in angular)
 - Services - `services/api.service.ts`
 - Dependency Injection - `services/api.service.ts` and `services/products.service.ts`
+- Layouting - `app.component.html`, `app.component.ts`, `app/layout`, `styles.scss`
+- HTML [Directives](https://angular.dev/guide/directives#tracking-items-with-ngfor-trackby) - `home.component.html` and `home.component.ts`
+- Passing Data to Components (@Input) - `product.component.ts`, `product.component.html` and `home.component.html`
+- Property Binding - `product.component.html` and `product.component.ts`
+- Event Binding (@Output) - `product.component.html` and `product.component.ts`
+- Two Way Binding - `product.component.html`
+- Input Element Double Binding - `home.component.html`, `home.component.ts` and `product.component.ts`

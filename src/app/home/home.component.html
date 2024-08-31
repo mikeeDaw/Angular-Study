@@ -1,1 +1,28 @@
-<p>home works!</p>
+<div class="column datawrap">
+  <div class="row wrap wrapper">
+    <!-- NgFor -->
+    <!-- • is a Angular HTML directive. To use NgFor, import it in the .ts file. -->
+    <!-- • The `products` is the class property `products` in the .ts file of the component. -->
+    <!-- • Loops and repeats the host template (the 'app-product' element) for each item in the list. -->
+
+    <!-- Passing Data -->
+    <!-- the `[product]` refers to the @Input variable in the .ts file and you assign the local looped 'product' variable to it. -->
+
+    <!-- Event Binding -->
+    <!-- The event on the `product.component.ts` file is enclosed with '()'. And once that event emits something, the passed callback is executed. -->
+    <app-product
+      *ngFor="let product of products"
+      [product]="product"
+      (productOutput)="onProductEmitted(product)"
+    >
+    </app-product>
+  </div>
+
+  <!-- Paginator -->
+  <p-paginator
+    (onPageChange)="onPageChange($event)"
+    [rows]="rows"
+    [totalRecords]="totalRecords"
+    [rowsPerPageOptions]="[5, 10, 15]"
+  />
+</div>

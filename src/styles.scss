@@ -1,9 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
 
 // Put only global styles here. Create a 'style/' directory for other styles.
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
+// NOTE: Styles on '*' selector messes up the styling on imported UI Component frameworks!
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0; // This messes look of the dropdown in the paginator.
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+
+// Can also use the component's selector in the css file.
+html,
+body,
+app-root {
+  height: 100%;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
 }
