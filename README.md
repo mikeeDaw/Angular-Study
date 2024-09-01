@@ -17,8 +17,13 @@
 ## Commands
 
 - Start App in Development Mode -> `ng serve`.
-- Create a component -> `ng generate component [directory/path (relative from 'src/app' directory)]`.
+- Create a component -> `ng generate component [directory/path] [--standalone]`.
+  - `[directory/path]` is relative from 'src/app' directory.
+  - `--standalone` (optional, tho default) makes the component a standalone components.
 - Create a service -> `ng generate service [directory/path]`
+- Create a module -> `ng generate module [directory/path] [--routing]`
+  - `--routing` (optional) creates a dedicated file for **in-module routing**
+    - 'in-module' routing is the routing inside a specific module.
 
 ## Some Concepts
 
@@ -44,6 +49,24 @@
   1. To Process EACH TIME an item (can be data or an event) is emitted from observable
   2. Process any error that occurs
   3. Clean up everything once the observer completes. (Seldom Used)
+
+#### Standalone Components
+
+- Allows to write components, directives and pipes without creating an associated '@NgModule'
+- Kinda like made to make creating components better than with NgModules.
+- Self Contained, and directly MANAGE THEIR OWN dependencies in the 'imports'.
+- Lazy-loaded.
+- This is the '@Component' with "standalone: true".
+
+#### Modules
+
+- (Not recommended tho since Standalone components is introduced now...)
+- The one with the '@NgModule'.
+- Used to separate and segment application into parts.
+- Kinda like a mini-application in your app.
+- Ex: A huge App with a dashboard, user, profile sections that has lots of components and stuff,
+  - Modules Can help organize load.
+  - Modules use lazy loading (only requesting specific/necessary parts) instead of loading the whole app.
 
 ## Notes ko
 

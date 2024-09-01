@@ -1,6 +1,6 @@
 <!-- `{{ }}` allows to use variables from the .ts file -->
 <div class="column wrapper gap-1">
-  <!-- '[]' is used for Property Binding. Set values of HTML elements or directives based on a component property. (one way, Component -> HTML ) -->
+  <!-- '[]' is used for Property Binding. Set values of HTML elements or directives based on a component property. (one way, Component (.ts) -> HTML ) -->
   <!-- From a component's property into a target element property. '[]' identifies it as a target property, the one you want to assign a value. -->
   <!-- Without the '[]', Angular will treat the right hand side a string literal. -->
   <img [src]="product.image" alt="Product Thumbnail" />
@@ -11,7 +11,7 @@
   </div>
 
   <!-- `ngModel` -->
-  <!-- • A two-way/double binding (with `[()]`). bind a value of an 'input' element to a propery in a component & be in sync. (two way, Component <-> HTML) -->
+  <!-- • A two-way/double binding (with `[()]`). bind a value of an 'input' element to a propery in a component & be in sync. (two way, Component (.ts) <-> HTML) -->
   <!-- Needs to import 'FormsModule'-->
   <p-rating
     [(ngModel)]="product.rating"
