@@ -20,10 +20,12 @@
 - Create a component -> `ng generate component [directory/path] [--standalone]`.
   - `[directory/path]` is relative from 'src/app' directory.
   - `--standalone` (optional, tho default) makes the component a standalone components.
+    - `--standalone=false` to not make it a standalone.
 - Create a service -> `ng generate service [directory/path]`
 - Create a module -> `ng generate module [directory/path] [--routing]`
   - `--routing` (optional) creates a dedicated file for **in-module routing**
     - 'in-module' routing is the routing inside a specific module.
+- Create a pipe -> `ng generate pipe [directory/path]`
 
 ## Some Concepts
 
@@ -68,9 +70,18 @@
   - Modules Can help organize load.
   - Modules use lazy loading (only requesting specific/necessary parts) instead of loading the whole app.
 
+#### Pipes
+
+- Are simple functions used in templates to accept input value and return a transformed value.
+  - Ex: Formatting Date, Trunctating text, adding currency signs to prices, etc.
+- Can be used throughout the application
+
 ## Notes ko
 
 - Component Library: [PrimeNG](https://primeng.org/installation) \(Seems Good!\)
+- Wag muna pansinin yung `.spec.ts` files.
+
+* (Tutorial Link)[https://www.youtube.com/watch?v=f7BJFTEbc10&t=295s]
 
 #### Component Stucture
 
@@ -101,3 +112,8 @@
 - Event Binding (@Output) - `product.component.html` and `product.component.ts`
 - Two Way Binding - `product.component.html`
 - Input Element Double Binding - `home.component.html`, `home.component.ts` and `product.component.ts`
+- Modules - `app/modules/*`, `app.routes.ts`
+- Page Routing - `header.component.html` and `header.component.ts`
+- Pipes - `app/pipes/*`, `product.component.ts` and `product.component.html`
+- Popup Dialog - `home.ts`, `home.html`, `form-dialog.ts`, `form-dialog.html`, `product.ts`, and `product.html`
+- Form Validator - `form-dialog.ts` and `form-dialog.html`

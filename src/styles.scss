@@ -7,8 +7,8 @@
 
 // NOTE: Styles on '*' selector messes up the styling on imported UI Component frameworks!
 * {
-  padding: 0; // This messes look of the dropdown in the paginator.
-  margin: 0;
+  // padding: 0; // This messes look of the PrimeNG Components.
+  // margin: 0;
   box-sizing: border-box;
   font-family: "Figtree", sans-serif;
 }
@@ -28,6 +28,14 @@ app-root {
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
 }
 
 .column {
@@ -61,4 +69,8 @@ app-root {
 
 .gap-2 {
   gap: 1rem;
+}
+
+.gap-3 {
+  gap: 1.7rem;
 }

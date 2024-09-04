@@ -1,14 +1,39 @@
 @use "../../styles/resource.scss" as v;
 
 .wrapper {
-  height: 80px;
+  height: fit-content;
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px 10px 15px 10px;
   border-bottom: 1px solid v.$borderCol;
   @include v.flex-flow(center, center);
-}
 
-.logo {
-  height: 100%;
-  object-fit: contain;
+  a {
+    text-decoration: none;
+    border: 1.5px solid #7e7e7e;
+    border-bottom-width: 3px;
+    color: rgb(92, 92, 92);
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+
+    &:active {
+      border-bottom-width: 1.5px;
+    }
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
+
+    // Put the added class from "routerLinkActive" and nest it.
+    &.activeAko {
+      color: #e7250c;
+      border-color: #e7250c;
+      font-weight: bold;
+    }
+  }
+
+  .logo {
+    height: 40px;
+    object-fit: contain;
+  }
 }

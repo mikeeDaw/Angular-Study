@@ -14,4 +14,12 @@ export const routes: Routes = [
     path: 'news',
     component: NewsComponent,
   },
+  {
+    path: 'about-us',
+    // This is how to lazy load a module when accessing a specific route.
+    loadChildren: () =>
+      import('../app/modules/about-us/about-us.module').then(
+        (m) => m.AboutUsModule
+      ),
+  },
 ];

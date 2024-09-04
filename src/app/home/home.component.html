@@ -10,10 +10,13 @@
 
     <!-- Event Binding -->
     <!-- The event on the `product.component.ts` file is enclosed with '()'. And once that event emits something, the passed callback is executed. -->
+    <!-- Right Side: Property of the Child, Left Side: 'Handler' of the Component Class. -->
+
     <app-product
       *ngFor="let product of products"
       [product]="product"
       (productOutput)="onProductEmitted(product)"
+      (edit)="toggleEditPopup(product)"
     >
     </app-product>
   </div>
@@ -26,3 +29,11 @@
     [rowsPerPageOptions]="[5, 10, 15]"
   />
 </div>
+
+<!-- Edit Popup -->
+<app-form-dialog
+  [product]="selectedProduct"
+  [display]="displayEditPopup"
+  (confirm)="onConfirmEdit($event)"
+  header="Edit Me"
+/>

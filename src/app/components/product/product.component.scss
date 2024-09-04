@@ -1,6 +1,12 @@
-button {
-  border: 1px solid #000;
+button:not([pButton]) {
+  border: 1.5px solid #6d6a6a;
   background-color: #fff;
   padding: 5px 10px;
+  border-radius: 10px;
+  border-bottom-width: 3px;
   cursor: pointer;
+
+  &:active {
+    border-bottom-width: 1.5px;
+  }
 }

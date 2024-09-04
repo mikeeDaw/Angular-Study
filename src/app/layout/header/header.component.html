@@ -1,3 +1,20 @@
-<header class="wrapper row">
+<header class="wrapper column gap-1">
   <img src="assets/images/oc-logo.svg" alt="Logo Image" class="logo" />
+
+  <div class="row gap-2">
+    <!-- `routerLink` changes the content inside the "<router-outlet>" instead of the whole page
+    to avoid refreshing the whole site. -->
+    <!-- `routerLinkActive` specifies a CSS class to add when the linked route is active. -->
+
+    <!-- `[routerLinkActiveOptions]="{ exact: true }"` is needed since the route '/' is still read as 'active' even if we are in other pages/routes. -->
+    <a
+      routerLink="/"
+      routerLinkActive="activeAko"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </a>
+    <a routerLink="/about-us" routerLinkActive="activeAko">About Us</a>
+    <a routerLink="/news" routerLinkActive="activeAko">News</a>
+  </div>
 </header>

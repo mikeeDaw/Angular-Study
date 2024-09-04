@@ -1,0 +1,58 @@
+<!-- The button with the function to show the dialog is not here because the dialog will be opened through an event within a class. -->
+
+<p-dialog
+  [header]="header"
+  [(visible)]="display"
+  [modal]="true"
+  closable="false"
+>
+  <!-- Attach the form Group using `[formGroup]="<formGroupProperty>" (import ReactiveFormsModule.) -->
+  <div class="column gap-1" [formGroup]="productForm">
+    <!-- Name -->
+    <div class="row gap-1">
+      <div class="price-label">Name:</div>
+      <!-- Since were using Reactive Forms and not template-driven, the `[(ngModel)]` is not used. -->
+      <!-- `FormControlName` corresponds to the key in the 'FormGroup'. -->
+      <input type="text" formControlName="name" />
+    </div>
+    <!-- Price -->
+    <div class="row gap-1">
+      <div class="price-label">Price:</div>
+      <input type="text" formControlName="price" />
+    </div>
+
+    <!-- Image -->
+    <div class="row gap-1">
+      <div class="price-label">Image:</div>
+      <input type="text" formControlName="image" />
+    </div>
+
+    <!-- Rating -->
+    <p-rating
+      formControlName="rating"
+      [readonly]="false"
+      iconCancelClass="hidden"
+    >
+    </p-rating>
+  </div>
+
+  <p-footer>
+    <!-- adding 'pButton' makes it a PrimeNG button. Same as using <p-button />. Icon is from PrimeNG -->
+    <!-- [class.name]='<booleanVal>' adds the class to the element if value is true. -->
+    <button
+      type="button"
+      pButton
+      icon="pi pi-check"
+      [disabled]="!submittable"
+      (click)="submittable ? onConfirm() : null"
+      label="Done"
+    ></button>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-ban"
+      (click)="onCancel()"
+      label="Cancel"
+    ></button>
+  </p-footer>
+</p-dialog>
