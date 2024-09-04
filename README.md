@@ -81,7 +81,7 @@
 - Component Library: [PrimeNG](https://primeng.org/installation) \(Seems Good!\)
 - Wag muna pansinin yung `.spec.ts` files.
 
-* (Tutorial Link)[https://www.youtube.com/watch?v=f7BJFTEbc10&t=295s]
+* [Tutorial Link](https://www.youtube.com/watch?v=f7BJFTEbc10&t=295s)
 
 #### Component Stucture
 
